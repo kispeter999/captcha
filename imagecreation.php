@@ -1,6 +1,5 @@
+<?php session_start(); ?>
 <?php
-session_start();
-
 $captcha = $_SESSION['captcha'];
 
 $img = imagecreatetruecolor(150, 60);

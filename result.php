@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 
 if (file_get_contents('answers.txt')){
@@ -11,7 +12,6 @@ if (file_get_contents('answers.txt')){
 }
 
 
-session_start();
 $answer = $_SESSION['answer'];
 $userAnswer = $_POST['answer'];
 
@@ -21,7 +21,6 @@ if ($userAnswer == $answer) {
     file_put_contents('answers.txt', $correctAnswer . "|" . $incorrectAnswer);
     $_SESSION['message'] = null;
 } else {
-    echo 'Captcha wrong!';
     $incorrectAnswer++;
     file_put_contents('answers.txt', $correctAnswer . "|" . $incorrectAnswer);
     $_SESSION['message'] = 'Incorrect captcha answer. Please try again. <br>';
