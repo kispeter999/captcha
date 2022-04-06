@@ -15,3 +15,5 @@ You can now enter ```localhost:8080``` into your browser
 Alternatively, you can use a docker image to have everything ready: ```docker pull meeoro/captcha:latest```
 
 Run the docker image with the following command: ```docker run -it -p 8080:8080 captcha```
+
+Or you can check a not really working version (because scripts don't have write permission on the school server) at ```https://meeoro.web.elte.hu/captcha/```
